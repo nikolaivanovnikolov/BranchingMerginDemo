@@ -9,12 +9,14 @@
 pipeline {
   agents any
   stages {
-    stage('checkout') {
-      checkout scm
-    }
     stage('Build') {
       steps {
         echo 'Step: Building...'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Step: Testing...'
       }
     }
     stage('Deploy') {
@@ -29,11 +31,6 @@ pipeline {
          } else if (env.BRANCH_NAME.startsWith("master")) {
           echo "Deploying to PROD environment"
          }
-      }
-    }
-    stage('Test') {
-      steps {
-        echo 'Step: Testing...'
       }
     }
   }
