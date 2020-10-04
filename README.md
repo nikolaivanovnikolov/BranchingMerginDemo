@@ -1,2 +1,2 @@
-# BranchingMerginDemo
-BranchingMerginDemo
+# BranchingMergingDemo
+BranchingMergingDemo
