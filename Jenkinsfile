@@ -1,4 +1,15 @@
-node {
+#!groovy
+/** @Library('pipeline') _ **/
+
+/**
+ * This is the pipeline for developing BWC.
+ *
+ * You can find the shared library 'pipeline' code here:
+ *
+ * https://sqbu-github.cisco.com/Broadsoft/pipeline
+ **/
+
+stages {
  stage('checkout') {
   checkout scm
  }
