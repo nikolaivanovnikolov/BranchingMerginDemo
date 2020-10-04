@@ -22,6 +22,8 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Step: Deploying...'
+        sh "chmod +x HelloWorld.sh "
+        sh ". / HelloWorld.sh "
       }
     }
   }
