@@ -22,12 +22,6 @@ stages {
    echo "Deploying to Stage after build and Dev Deployment"
   } else if (env.BRANCH_NAME.startsWith("master")) {
    echo "Deploying to PROD environment"
-  }
- 
-  sh ""
-  "chmod +x HelloWorld.sh 
-  . / HelloWorld.sh ""
-  "
- 
+  } 
  }
 }
