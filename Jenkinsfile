@@ -7,9 +7,6 @@
  **/
 
 pipeline {
-  agent { 
-    any 
-  }
   stages {
     stage('Build') {
       steps {
@@ -22,9 +19,7 @@ pipeline {
       }
     }
     stage('Deploy') {
-      agent { 
-        label 'master' 
-      }
+      agent { any }
       steps {
         echo 'Step: Deploying...'
         sh "chmod +x HelloWorld.sh "
