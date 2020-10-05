@@ -7,7 +7,7 @@
  **/
 
 pipeline {
-  agent none
+  agent master
   stages {
     stage('Build') {
       steps {
