@@ -7,16 +7,18 @@
  **/
 
 pipeline {
-  agent { any }
+  agent { label 'master' }
   stages {
     stage('Build') {
+      agent { label 'master' }
       steps {
         echo 'Step: Building...'
       }
     }
     stage('Test') {
+      agent { label 'master' }
       steps {
-        echo 'Step: Testing...'
+          echo 'Step: Testing...'
       }
     }
     stage('Deploy') {
